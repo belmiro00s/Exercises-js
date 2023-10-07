@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+
+    <style>
+       
+        body{
+        font: normal 16 Arial;
+      }
+
+      input {
+        font: normal 40 Arial;
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="area">Interaja</div>
+
+    <script>
+      var event = window.document.getElementById("area");
+      event.addEventListener("click", clicar); //criando evento de click 
+      event.addEventListener("mouseenter", entrar); //criando evento de quando o mouse entra
+      event.addEventListener("mouseout", sair); // criando evento de quando o mouse sai 
+
+      function clicar() {
+        event.innerText = "clicou";
+        event.style.background = "red"; // aqui ao clicar, modifica o texto e a cor, quee esta dentro do parametro
+      }
+
+      function entrar() {
+        event.innerText = "entrou";
+        event.style.background = "pink";
+      }
+
+      function sair() {
+        event.innerText = "Saiu";
+        event.style.background = "green";
+      }
+    </script>
+  </body>
+</html>

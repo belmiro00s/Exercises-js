@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+
+    <style>
+      body {
+        font: normal 16 Arial;
+      }
+
+      input {
+        font: normal 40 Arial;
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Veja quantos milisegundos tem </h1>
+    <p></p>
+
+   
+
+    <input type="button" value="Dia atual" id="buttonss" />
+
+    <script>
+        var button = document.querySelector('input#buttonss')
+        button.addEventListener('click', buttoninput)
+    
+        function buttoninput() {
+          var agora = new Date()
+          var diaSem = agora.getDay()
+    
+          switch(diaSem) {
+            case 0:
+              window.alert("Domingo")
+              break
+            case 1:
+              window.alert("Segunda-feira")
+              break
+            case 2:
+              window.alert("Terça-feira")
+              break
+            case 3:
+              window.alert("Quarta-feira")
+              break
+            case 4:
+              window.alert("Quinta-feira")
+              break
+            case 5:
+              window.alert("Sexta-feira")
+              break
+            case 6:
+              window.alert("Sábado")
+              break
+          }
+        }
+      </script>
+  </body>
+</html>

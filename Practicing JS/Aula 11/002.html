@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+
+    <style>
+       body{
+        font: normal 16 Arial;
+      }
+
+      input {
+        font: normal 40 Arial;
+        width: 100px;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <h1>Bem vindo a lugar nenhum</h1>
+    <p>Quer saber se voce é maior de idade? <br/>Coloque sua idade nesse campo feio abaixo.</p>
+   
+
+
+    <div>
+    
+    <input type="number" name="txtn1" id="txtn1" placeholder="idade campo" >
+    <input type="button" value="Verificar" id="button_id" />
+    
+    </div>
+    <script>
+      var button = document.querySelector('input#button_id')
+      button.addEventListener('click',buttoninput)
+      function buttoninput() {
+      var idade =  document.querySelector("input#txtn1")
+      var idadenum = Number(idade.value)
+       
+    
+      if (idadenum >=18 ) {
+        
+
+        window.alert('voce e maior de idade')
+      }
+     
+      else if (idadenum < 18 && idadenum > 0 ) { // se idadae for menor e ou maior que zero
+
+        window.alert(`Voce tem ${idadenum} anos de idade ! `)
+      }
+
+      else {
+
+        window.alert('volta pra creche ')
+      }
+    }
+      
+    </script>
+  </body>
+</html>
