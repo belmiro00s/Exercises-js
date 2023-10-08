@@ -75,27 +75,48 @@ res.innerHTML = ` O menor valor informado foi: ${smaller} `
 
 
 function sumall(){
-  
-  let total = analy.reduce(function (a,b){
-  return (a +  b) 
+  let sum = 0 
 
- 
+  for (let i = 0; i < analy.length; i++){
+    
+    let number = parseFloat (analy[i])
   
-  }, 0)
-  res.innerHTML = ` O menor valor informado foi: ${total.value} `
+    sum += number
+
+  
+
+   
+  
+
+  res.innerHTML = `A soma de todos os valores é: ${sum}`
+  console.log(sum)
+  
   
   }
-
-
-
-
-
-function all(){
-
-  sumnumber()
-
-
-
-  
 }
+
+ function media(){
+
+  let sum = 0 
+
+  for (let i = 0; i < analy.length; i++){
+    
+  let number = parseFloat (analy[i])
+  
+  sum += number
+
+  var medias = (sum / analy.length)
+
+    
+   }
+  console.log(medias)
+  res.innerHTML = `A media de todos os valores é: ${medias}`
+  console.log(mediatotal)
+}
+  
  
+
+
+
+
+
